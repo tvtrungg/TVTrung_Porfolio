@@ -1085,14 +1085,23 @@
     .table-responsive-md>.table-bordered {
         border: 0;
     }
+    .col-md-3{
+        display: none;
+    }
 }
 
 @media (max-width: 991.98px) {
+
     .cursor-1,
     .cursor-2 {
         display: none;
     }
-    
+
+    .ftco-navbar-light.scrolled .navbar-brand {
+        color: var(--primary);
+    }
+
+
     .table-responsive-lg {
         display: block;
         width: 100%;

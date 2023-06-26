@@ -54,9 +54,6 @@ AOS.init({
 			} else {
 				$(this).addClass('active');
 			}
-
-
-
 		});
 
 	};
@@ -527,4 +524,10 @@ document.querySelectorAll('a').forEach(links => {
         cursor2.classList.remove('active');
     }
 
+});
+
+// hide menu when click on menu item
+$('.nav-link').click(function () {
+	$('.navbar-collapse').removeClass('show');
+	$('.navbar-toggler').addClass('collapsed');
 });

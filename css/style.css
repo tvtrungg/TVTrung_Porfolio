@@ -16,8 +16,6 @@
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #ffffff;
-  --gray: var(--secondary);
-  --gray-dark: var(--dark);
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
@@ -71,10 +69,10 @@ body {
   background-color: var(--white);
 }
 
-.disable{
+.disable {
   pointer-events: none;
   cursor: default;
-    color: #ccc;
+  color: #ccc;
 }
 
 
@@ -370,7 +368,7 @@ h2,
 h3,
 h4,
 h5,
-h6{
+h6 {
   margin-top: 0;
   margin-bottom: 0.5rem;
   line-height: 1.5;
@@ -6339,7 +6337,7 @@ button.bg-dark:focus {
   border-color: var(--green) !important;
 }
 
-.border-primary-yellow{
+.border-primary-yellow {
   border-color: var(--yellow) !important;
 }
 
@@ -7839,7 +7837,7 @@ button.bg-dark:focus {
   white-space: normal;
 }
 
-.shadow{
+.shadow {
   border-radius: 10px;
 }
 
@@ -10719,11 +10717,10 @@ a:focus {
 
 .ftco-navbar-light.scrolled .navbar-toggler {
   border: none;
-  color: rgba(0, 0, 0, 0.5) !important;
-  border-color: rgba(0, 0, 0, 0.5) !important;
+  color: var(--white);
   cursor: pointer;
   text-transform: uppercase;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: .1em;
 }
 
@@ -11234,7 +11231,7 @@ a:focus {
   padding-bottom: 10px;
 }
 
-.resume-wrap:after{
+.resume-wrap:after {
   content: '';
   display: block;
   position: absolute;
@@ -11244,8 +11241,9 @@ a:focus {
   height: 115%;
   border-left: 2px solid var(--primary);
   pointer-events: none;
-  z-index:-1;
+  z-index: -1;
 }
+
 /* 
 .resume-wrap:last-child:after{
   height: 100%;
@@ -12751,11 +12749,11 @@ textarea.form-control {
 
 .suns {
   position: absolute;
-    width: 53px;
-    height: 50px;
-    overflow: hidden;
-    top: -21px;
-    right: 2px;
+  width: 53px;
+  height: 50px;
+  overflow: hidden;
+  top: -21px;
+  right: 2px;
 }
 
 .suns::before {
@@ -12980,23 +12978,23 @@ textarea.form-control {
 
 .head .eye.two {
   background-color: lightgrey;
-    border: 1px solid #020204;
-    height: 8px;
-    width: 8px;
-    top: 13px;
-    left: 50%;
+  border: 1px solid #020204;
+  height: 8px;
+  width: 8px;
+  top: 13px;
+  left: 50%;
 }
 
 .head .eye.two:after {
   background: #020204;
-    border-radius: 50%;
-    content: "";
-    display: block;
-    height: 4px;
-    position: absolute;
-    width: 4px;
-    top: 2px;
-    left: 8px;  
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 4px;
+  position: absolute;
+  width: 4px;
+  top: 2px;
+  left: 8px;
 }
 
 .ball {
@@ -13059,12 +13057,12 @@ textarea.form-control {
 
 .ring.two {
   height: 33px;
-    width: 70px;
-    -ms-transform: rotate(50deg);
-    -webkit-transform: rotate(50deg);
-    transform: rotate(50deg);
-    top: 58%;
-    left: 9%;
+  width: 70px;
+  -ms-transform: rotate(50deg);
+  -webkit-transform: rotate(50deg);
+  transform: rotate(50deg);
+  top: 58%;
+  left: 9%;
 }
 
 .ring.two:after {
@@ -13303,19 +13301,27 @@ textarea.form-control {
 }
 
 /*skill image*/
-.skill_images{
+.skill_images {
   height: 50%;
 }
 
 /*contact*/
-.col-md-6 .icon:hover{
-  background: #ff722b!important;
+.col-md-6 .icon:hover {
+  background: #ff722b !important;
   cursor: pointer;
 }
 
-.col-md-6 .icon:focus{
-  background: #ef5100!important;
+.col-md-6 .icon:focus {
+  background: #ef5100 !important;
 }
+
+/*project*/
+/* .finishing {
+  -webkit-filter: blur(2px);
+}
+.finishing:hover {
+  -webkit-filter: blur(0px);
+} */
 
 
 
@@ -13333,43 +13339,43 @@ h3.dark,
 h4.dark,
 h5.dark,
 h6.dark,
-.resume-wrap .position.dark{
+.resume-wrap .position.dark {
   color: #efefef;
 }
 
-b.dark{
+b.dark {
   color: var(--orange);
 }
+
 .ftco-about .counter-wrap .text p span.dark,
-.ftco-about ul.about-info li span.dark:first-child{
+.ftco-about ul.about-info li span.dark:first-child {
   color: var(--white);
 }
 
-#navi li a.dark{
+#navi li a.dark {
   color: #efefef;
 }
 
-.ftco-navbar-light.scrolled.dark{
+.ftco-navbar-light.scrolled.dark {
   background: #101010;
 }
 
-.ftco-navbar-light .navbar-nav>.nav-item>.nav-link.dark{
+.ftco-navbar-light .navbar-nav>.nav-item>.nav-link.dark {
   color: var(--white);
 }
 
-.navbar-dark .navbar-brand.dark:hover ,
+.navbar-dark .navbar-brand.dark:hover,
 .navbar-dark .navbar-brand.dark:focus {
   color: var(--white);
 }
 
 .ftco-navbar-light.scrolled .navbar-brand.dark,
-.ftco-navbar-light .navbar-brand.dark{
+.ftco-navbar-light .navbar-brand.dark {
   color: var(--primary);
 }
 
 .col-lg-4.dark span,
 .col-lg-4.dark h2,
-.col-lg-4.dark .h2{
+.col-lg-4.dark .h2 {
   color: white;
 }
-
