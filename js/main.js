@@ -531,3 +531,11 @@ $('.nav-link').click(function () {
 	$('.navbar-collapse').removeClass('show');
 	$('.navbar-toggler').addClass('collapsed');
 });
+
+//nếu ở #home-section thì nav-item nav-link có lớp active
+$(window).scroll(function () {
+	if ($(window).scrollTop() == 0) {
+		$('.nav-link[href="#home-section"]').addClass('active');
+	}
+});
+
