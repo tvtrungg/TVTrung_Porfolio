@@ -523,7 +523,6 @@ document.querySelectorAll('a').forEach(links => {
         cursor1.classList.remove('active');
         cursor2.classList.remove('active');
     }
-
 });
 
 // hide menu when click on menu item

@@ -13273,7 +13273,7 @@ textarea.form-control {
   pointer-events: none;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  z-index: 10000;
+  z-index: 1000;
 }
 
 .cursor-1.active {
@@ -13288,12 +13288,12 @@ textarea.form-control {
   left: 0;
   height: 3rem;
   width: 3rem;
-  border: .1rem solid var(--primary);
+  border: 0.1rem solid var(--primary);
   pointer-events: none;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  z-index: 10000;
-  transition: .3s linear;
+  z-index: 1000;
+  transition: 0.15s linear;
 }
 
 .cursor-2.active {
