@@ -436,9 +436,12 @@ $(function () {
 // toggle light and dark mode
 // Lấy tham chiếu đến phần tử button switch
 var switchButton = document.querySelector('.slider');
+modeToggle = document.querySelector(".drak-light");
 
 // Thêm sự kiện click cho button switch
-switchButton.addEventListener('click', function () {
+modeToggle.addEventListener('click', function () {
+    modeToggle.classList.toggle("active");
+
 	// Toggle class 'dark-mode' trên phần tử body
 	document.body.classList.toggle('dark');
 
