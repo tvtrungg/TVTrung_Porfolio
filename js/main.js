@@ -436,7 +436,7 @@ $(function () {
 // toggle light and dark mode
 // Lấy tham chiếu đến phần tử button switch
 var switchButton = document.querySelector('.slider');
-modeToggle = document.querySelector(".drak-light");
+modeToggle = document.querySelector(".dark-light");
 
 if (localStorage.getItem('mode') == 'dark') {
 	document.body.classList.add('dark');

@@ -1074,6 +1074,22 @@
     }
 }
 
+@media (max-width: 540px){
+    .projects_btn{
+        flex-direction: column;
+    }
+    .projects_btn a:first-child{
+        margin-right: 0px;
+        margin-bottom: 5px;
+      }
+}
+
+@media (max-width: 400px){
+    .projects_btn{
+        margin-left: 10px;
+    }
+}
+
 @media (max-width: 767.98px) {
     .table-responsive-md {
         display: block;

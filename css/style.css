@@ -6,6 +6,7 @@
  */
 :root {
   --tcolor: rgb(119 119 119);
+  --icon_mode: #cfcfcf;
   --primary: #F65604;
   --secondary: #6c757d;
   --indigo: #6610f2;
@@ -17,6 +18,7 @@
   --teal: #20c997;
   --cyan: #17a2b8;
   --white: #ffffff;
+  --black: #000000;
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
@@ -31,8 +33,7 @@
   --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   --boxShadow3:
-    4px 4px 8px rgb(189 200 213),
-    -4px -4px 8px rgb(255 255 255);
+    4px 4px 8px rgb(189 200 213);
   --navbar_scrolled: #ffffff;
   --navlinks: #000000;
   --navbar_brand: #000000;
@@ -51,6 +52,7 @@ body {
   color: #747474;
   text-align: left;
   background-color: var(--white);
+  overflow-x: hidden;
 }
 
 /*Dark mode*/
@@ -599,6 +601,10 @@ small,
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+}
+
+.col-md-9{
+  width: 95%;
 }
 
 .col {
@@ -10516,13 +10522,16 @@ a:focus {
 
 @media (max-width: 991.98px) {
   .ftco-navbar-light {
-    background: #000000 !important;
+    background: var(--black) !important;
     position: relative;
     top: 0;
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 15px;
     padding-right: 15px;
+  }
+  .ftco-navbar-light .dark-light .moon{
+    color: var(--icon_mode);
   }
 }
 
@@ -10553,8 +10562,11 @@ a:focus {
 
 @media (max-width: 991.98px) {
   .ftco-navbar-light .navbar-nav {
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     margin-right: 0;
+  }
+  .dark-light{
+    margin-bottom: 20px;
   }
 }
 
@@ -10673,7 +10685,7 @@ a:focus {
 
 .ftco-navbar-light .navbar-toggler {
   border: none;
-  color: rgba(255, 255, 255, 0.5) !important;
+  color: var(--icon_mode);
   cursor: pointer;
   padding-right: 0;
   text-transform: uppercase;
@@ -11574,6 +11586,20 @@ a:focus {
   color: rgba(255, 255, 255, 0.9);
 }
 
+.projects_btn{
+  display: flex;
+  justify-content: center;
+  margin-left: 20px;
+}
+
+.projects_btn a:first-child{
+  margin-right: 10px;
+}
+
+.project_title{
+  align-items: center;
+}
+
 .project {
   width: 100%;
   height: 250px;
@@ -11956,7 +11982,7 @@ textarea.form-control {
   display: block;
   margin-bottom: 5px;
   text-transform: uppercase;
-  color: black;
+  color: var(--black);
   letter-spacing: 3px;
 }
 
@@ -12276,6 +12302,23 @@ textarea.form-control {
   color: var(--primary);
 }
 
+@keyframes blinking-shadow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+}
+/* Áp dụng animation vào phần tử khi hover (được kích hoạt khi con trỏ nằm trên phần tử) */
+.contact-info .viewOnGG {
+  cursor: pointer;
+  animation: blinking-shadow 2s infinite!important;
+}
+
 .contact-section .contact-form {
   width: 100%;
 }
@@ -12438,7 +12481,7 @@ textarea.form-control {
 
 .comment-list li .comment-body .reply:hover {
   color: var(--white);
-  background: black;
+  background: var(--black);
 }
 
 .search-form .form-group {
@@ -12771,7 +12814,7 @@ textarea.form-control {
 
 /*Button Light/ Dark Mode*/
 
-.drak-light {
+.dark-light {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12783,28 +12826,29 @@ textarea.form-control {
   position: relative;
 }
 
-.drak-light i {
+.dark-light i {
   position: absolute;
-  color: var(--secondary);
+  color: var(--icon_mode);
   font-size: 1.2em;
   transition: all 0.3s ease
 }
 
-.drak-light i.sun {
+.dark-light .moon{
+  color: var(--secondary);
+}
+
+.dark-light i.sun {
   opacity: 0;
   pointer-events: none;
 }
 
-.drak-light.active i {
-  color: #dbdbdb;
-}
 
-.drak-light.active i.sun {
+.dark-light.active i.sun {
   opacity: 1;
   pointer-events: auto;
 }
 
-.drak-light.active i.moon {
+.dark-light.active i.moon {
   pointer-events: none;
   opacity: 0;
 }

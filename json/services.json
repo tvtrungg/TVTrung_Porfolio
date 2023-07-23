@@ -1,0 +1,45 @@
+[
+    {
+        "id": 1,
+        "name": "WraParty",
+        "status": "(In progress)",
+        "cdn": "service4.jpg",
+        "description": "Web Design"
+    },
+    {
+        "id": 2,
+        "name": "Club Website",
+        "status": "(In progress)",
+        "cdn": "service5.avif",
+        "description": "Web Design"
+    },
+    {
+        "id": 3,
+        "name": "Bin Smart",
+        "status": "",
+        "cdn": "service1.jpg",
+        "description": "Web Design"
+    },
+    {
+        "id": 4,
+        "name": "Happy Hotel",
+        "status": "",
+        "cdn": "service2.jpg",
+        "description": "Web Design"
+    },
+    {
+        "id": 5,
+        "name": "Covid Management Website",
+        "status": "",
+        "cdn": "service3.jpg",
+        "description": "Web Design"
+    },
+    {
+        "id": 6,
+        "name": "Branding & Illustration Design",
+        "status": "",
+        "cdn": "work-6.jpg",
+        "description": "Web Design"
+    }
+
+]
