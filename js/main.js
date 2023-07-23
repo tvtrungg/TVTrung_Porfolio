@@ -445,6 +445,7 @@ if (localStorage.getItem('mode') == 'dark') {
 	document.body.classList.remove('dark');
 	modeToggle.classList.remove("active");
 }
+
 // Thêm sự kiện click cho button switch
 modeToggle.addEventListener('click', function () {
 	// Toggle class 'dark-mode' trên phần tử body
@@ -457,34 +458,6 @@ modeToggle.addEventListener('click', function () {
 		document.body.classList.add('dark');
 		modeToggle.classList.add("active");
 	}
-
-	// // Toggle class 'dark-mode' trên phần tử navbar
-	// var navbar = document.querySelector('.navbar');
-	// navbar.classList.toggle('dark');
-
-	// Lấy danh sách các nav-link
-	// var navLinks = document.querySelectorAll('.nav-link');
-
-	// // Lặp qua từng nav-link và thêm/xóa class 'dark' tùy thuộc vào trạng thái của body
-	// navLinks.forEach(function (link) {
-	// 	link.classList.toggle('dark');
-	// });
-
-	// $('.navbar-brand').toggleClass('dark');
-	
-	// thêm các thẻ h1, h2, h3, h4, h5, h6
-	// var headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6, span, b');
-	// headings.forEach(function (heading) {
-	// 	heading.classList.toggle('dark');
-	// });
-
-	// $('#navi li a').toggleClass('dark');
-
-	// $('.col-lg-4').toggleClass('dark');
-
-	// $('.shadow').toggleClass('dark');
-
-	// $('rounded-lg shadow p-4').toggleClass('bg-white');
 });
 
 
@@ -494,11 +467,24 @@ var currentMonth = currentDate.getMonth(); // Lấy tháng hiện tại
 var nextMonth = currentMonth + 1; // Lấy tháng tiếp theo
 var nextMonthFirstDay = new Date(currentDate.getFullYear(), nextMonth, 1); // Lấy ngày đầu tiên của tháng tiếp theo
 var lastDayCurrentMonth = new Date(nextMonthFirstDay - 1); // Lấy ngày cuối cùng của tháng hiện tại
+
+
+
+// Hiển thị số ngày còn lại của tháng
 var remainingDays = lastDayCurrentMonth.getDate() - currentDate.getDate(); // Tính số ngày còn lại
+$('.remainingDays').text(remainingDays);
+$('.remainingDays').attr('data-number', remainingDays);
 
 
-// Hiển thị số ngày còn lại lên màn hình
-$('.number').text(remainingDays);
+
+// Thời gian thành lập website
+var startTime = new Date('2023-06-25');
+var differenceTime = currentDate.getTime() - startTime.getTime(); // Tính khoảng thời gian giữa 2 thời gian
+var foudingDate = Math.floor(differenceTime / 1000 / 60 / 60 / 24); // Tính số ngày
+$('.founding-date').text(foudingDate);
+$('.founding-date').attr('data-number', foudingDate);
+
+
 
 // Tạo class disable để disable button
 $('.disable').attr('disabled', 'disabled');
@@ -519,28 +505,30 @@ $('.close_iframe, .class_blur').click(function () {
 }
 );
 
-// cursor
+
+// Cursor
 let cursor1 = document.querySelector('.cursor-1');
 let cursor2 = document.querySelector('.cursor-2');
 
 window.onmousemove = (e) => {
-    cursor1.style.top = e.pageY + 'px';
-    cursor1.style.left = e.pageX + 'px';
-    cursor2.style.top = e.pageY + 'px';
-    cursor2.style.left = e.pageX + 'px';
+	cursor1.style.top = e.pageY + 'px';
+	cursor1.style.left = e.pageX + 'px';
+	cursor2.style.top = e.pageY + 'px';
+	cursor2.style.left = e.pageX + 'px';
 }
 
 document.querySelectorAll('a').forEach(links => {
-    links.onmouseenter = () => {
-        cursor1.classList.add('active');
-        cursor2.classList.add('active');
-    }
+	links.onmouseenter = () => {
+		cursor1.classList.add('active');
+		cursor2.classList.add('active');
+	}
 
-    links.onmouseleave = () => {
-        cursor1.classList.remove('active');
-        cursor2.classList.remove('active');
-    }
+	links.onmouseleave = () => {
+		cursor1.classList.remove('active');
+		cursor2.classList.remove('active');
+	}
 });
+
 
 // hide menu when click on menu item
 $('.nav-link').click(function () {

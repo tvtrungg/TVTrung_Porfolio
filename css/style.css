@@ -12313,11 +12313,30 @@ textarea.form-control {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   }
 }
+
+@keyframes blinking-shadow-dark{
+  0% {
+    box-shadow:  0 0.5rem 1rem var(--shadow);
+  }
+  50% {
+    box-shadow: 0 1.2rem 3rem var(--shadow);
+  }
+  100% {
+    box-shadow: 0 0.5rem 1rem var(--shadow);
+  }
+}
+
+/*tạo blinking-shadow cho body.dark*/
+body.dark .contact-info .viewOnGG {
+  animation: blinking-shadow-dark 2s infinite!important;
+}
 /* Áp dụng animation vào phần tử khi hover (được kích hoạt khi con trỏ nằm trên phần tử) */
 .contact-info .viewOnGG {
   cursor: pointer;
   animation: blinking-shadow 2s infinite!important;
 }
+
+
 
 .contact-section .contact-form {
   width: 100%;
