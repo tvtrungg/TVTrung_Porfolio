@@ -438,39 +438,53 @@ $(function () {
 var switchButton = document.querySelector('.slider');
 modeToggle = document.querySelector(".drak-light");
 
+if (localStorage.getItem('mode') == 'dark') {
+	document.body.classList.add('dark');
+	modeToggle.classList.add("active");
+} else {
+	document.body.classList.remove('dark');
+	modeToggle.classList.remove("active");
+}
 // Thêm sự kiện click cho button switch
 modeToggle.addEventListener('click', function () {
-    modeToggle.classList.toggle("active");
-
 	// Toggle class 'dark-mode' trên phần tử body
-	document.body.classList.toggle('dark');
+	if (localStorage.getItem('mode') == 'dark') {
+		localStorage.setItem('mode', 'light');
+		document.body.classList.remove('dark');
+		modeToggle.classList.remove("active");
+	} else {
+		localStorage.setItem('mode', 'dark');
+		document.body.classList.add('dark');
+		modeToggle.classList.add("active");
+	}
 
-	// Toggle class 'dark-mode' trên phần tử navbar
-	var navbar = document.querySelector('.navbar');
-	navbar.classList.toggle('dark');
+	// // Toggle class 'dark-mode' trên phần tử navbar
+	// var navbar = document.querySelector('.navbar');
+	// navbar.classList.toggle('dark');
 
 	// Lấy danh sách các nav-link
-	var navLinks = document.querySelectorAll('.nav-link');
+	// var navLinks = document.querySelectorAll('.nav-link');
 
-	// Lặp qua từng nav-link và thêm/xóa class 'dark' tùy thuộc vào trạng thái của body
-	navLinks.forEach(function (link) {
-		link.classList.toggle('dark');
-	});
+	// // Lặp qua từng nav-link và thêm/xóa class 'dark' tùy thuộc vào trạng thái của body
+	// navLinks.forEach(function (link) {
+	// 	link.classList.toggle('dark');
+	// });
 
-	$('.navbar-brand').toggleClass('dark');
+	// $('.navbar-brand').toggleClass('dark');
+	
 	// thêm các thẻ h1, h2, h3, h4, h5, h6
-	var headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6, span, b');
-	headings.forEach(function (heading) {
-		heading.classList.toggle('dark');
-	});
+	// var headings = document.querySelectorAll('h1, h2, h3, h4, h5, h6, span, b');
+	// headings.forEach(function (heading) {
+	// 	heading.classList.toggle('dark');
+	// });
 
-	$('#navi li a').toggleClass('dark');
+	// $('#navi li a').toggleClass('dark');
 
-	$('.col-lg-4').toggleClass('dark');
+	// $('.col-lg-4').toggleClass('dark');
 
-	$('.shadow').toggleClass('dark');
+	// $('.shadow').toggleClass('dark');
 
-	$('rounded-lg shadow p-4').toggleClass('bg-white');
+	// $('rounded-lg shadow p-4').toggleClass('bg-white');
 });
 
 
