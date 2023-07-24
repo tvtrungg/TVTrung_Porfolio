@@ -4,6 +4,8 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+ @import url(https://fonts.googleapis.com/css?family=Poppins:500,600,700,800);
+
 :root {
   --tcolor: rgb(119 119 119);
   --icon_mode: #cfcfcf;
@@ -42,10 +44,9 @@
   --shadow: rgba(0, 0, 0, 0.15);
 }
 
-
 body {
   margin: 0;
-  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-family: "Poppins", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   color: #747474;
@@ -11115,8 +11116,8 @@ a:focus {
 
 .progress-circle .progress .progress-left .progress-bar {
   left: 100%;
-  border-top-right-radius: 80px;
-  border-bottom-right-radius: 80px;
+  border-top-right-radius: 200px;
+  border-bottom-right-radius: 200px;
   border-left: 0;
   -webkit-transform-origin: center left;
   -ms-transform-origin: center left;
@@ -11129,8 +11130,8 @@ a:focus {
 
 .progress-circle .progress .progress-right .progress-bar {
   left: -100%;
-  border-top-left-radius: 80px;
-  border-bottom-left-radius: 80px;
+  border-top-left-radius: 200px;
+  border-bottom-left-radius: 200px;
   border-right: 0;
   -webkit-transform-origin: center right;
   -ms-transform-origin: center right;
