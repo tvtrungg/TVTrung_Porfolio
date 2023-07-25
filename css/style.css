@@ -10406,7 +10406,7 @@ a:focus {
 }
 
 .ftco-navbar-light.scrolled .navbar-brand {
-  color: #000000;
+  color: var(--navbar_brand);
   padding-top: 1rem;
   padding-bottom: 1rem;
   font-size: 24px;
@@ -12409,12 +12409,6 @@ body.dark .contact-info .viewOnGG {
   color: var(--white);
 }
 
-.ftco-navbar-light.scrolled .navbar-brand.dark,
-.ftco-navbar-light .navbar-brand.dark {
-  color: var(--primary);
-}
-
-
 
 .no-margin {
   margin: 0;
@@ -12424,6 +12418,7 @@ body.dark .contact-info .viewOnGG {
   padding: 8px;
   padding-left: 8px;
 }
+
 
 /*Button Light/ Dark Mode*/
 
