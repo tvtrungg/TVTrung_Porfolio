@@ -11254,11 +11254,11 @@ a:focus {
   transition: all 0.3s ease;
 }
 
-@media (max-width: 767.98px) {
+/* @media (max-width: 767.98px) {
   .project .overlay {
     opacity: .2;
   }
-}
+} */
 
 .project .text {
   max-width: 80%;
@@ -11286,7 +11286,7 @@ a:focus {
   font-size: 12px;
   font-weight: 600;
 }
-
+/* 
 @media (max-width: 767.98px) {
   .project .text {
     opacity: 1;
@@ -11295,7 +11295,7 @@ a:focus {
   .project .text span {
     color: rgba(255, 255, 255, 0.8);
   }
-}
+} */
 
 .project:hover .overlay,
 .project:focus .overlay {

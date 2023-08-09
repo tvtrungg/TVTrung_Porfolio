@@ -531,7 +531,7 @@ $('.close_iframe, .class_blur').click(function () {
 
 
 // hide menu when click on menu item
-$('.nav-link').click(function () {
+$('.nav-link, .dark-light').click(function () {
 	$('.navbar-collapse').removeClass('show');
 	$('.navbar-toggler').addClass('collapsed');
 });
