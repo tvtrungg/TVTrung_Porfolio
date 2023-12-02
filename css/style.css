@@ -73,10 +73,14 @@ body.dark b {
   color: var(--orange);
 }
 
-body.dark .col-lg-4 span,
+body.dark .col-lg-4 span
+{
+  color: var(--white);
+}
+
 body.dark .col-lg-4 h2,
 body.dark .col-lg-4 .h2 {
-  color: var(--white);
+  color: var(--black);
 }
 
 *,
@@ -12459,4 +12463,24 @@ body.dark .contact-info .viewOnGG {
 .dark-light.active i.moon {
   pointer-events: none;
   opacity: 0;
+}
+
+.card-img {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 460px;
+  box-shadow: 0 0.5rem 1rem var(--shadow) !important;
+}
+
+.card-img-1{
+  background-image: url(../images/bg-1.avif);
+}
+
+.card-img-2{
+  background-image: url(../images/bg-2.jpg);
+}
+
+.card-img-3{
+  background-image: url(../images/bg-3.avif);
 }
